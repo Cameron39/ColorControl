@@ -9,19 +9,21 @@
     <TextView
         android:id="@+id/tvAlphaVal"
         android:layout_width="57dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="44dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvGreenVal" />
 
     <TextView
         android:id="@+id/tvAlpha"
         android:layout_width="40dp"
-        android:layout_height="24dp"
+        android:layout_height="28dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
         android:text="@string/alpha"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvGreen" />
 
@@ -52,19 +54,21 @@
     <TextView
         android:id="@+id/tvGreen"
         android:layout_width="40dp"
-        android:layout_height="24dp"
+        android:layout_height="28dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:text="@string/green"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvBlue" />
 
     <TextView
         android:id="@+id/tvGreenVal"
         android:layout_width="57dp"
-        android:layout_height="27dp"
+        android:layout_height="28dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvBlueVal" />
 
@@ -83,26 +87,28 @@
     <TextView
         android:id="@+id/tvBlue"
         android:layout_width="40dp"
-        android:layout_height="24dp"
+        android:layout_height="28dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
         android:text="@string/blue"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRed" />
 
     <TextView
         android:id="@+id/tvBlueVal"
         android:layout_width="57dp"
-        android:layout_height="27dp"
+        android:layout_height="28dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRedVal" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/colorView"
         android:layout_width="wrap_content"
-        android:layout_height="155dp" />
+        android:layout_height="156dp" />
 
     <SeekBar
         android:id="@+id/sbRed"
@@ -114,26 +120,28 @@
         app:layout_constraintEnd_toStartOf="@+id/tvRedVal"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toEndOf="@+id/tvRed"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/colorView" />
 
     <TextView
         android:id="@+id/tvRed"
         android:layout_width="40dp"
-        android:layout_height="24dp"
+        android:layout_height="28dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="52dp"
         android:text="@string/red"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/colorView" />
 
     <TextView
         android:id="@+id/tvRedVal"
         android:layout_width="57dp"
-        android:layout_height="27dp"
+        android:layout_height="28dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/colorView" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier"
