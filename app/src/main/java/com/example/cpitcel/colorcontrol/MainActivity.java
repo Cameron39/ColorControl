@@ -1,3 +1,13 @@
+/*
+Cameron Pitcel
+CSC 470D Introduction to Android
+Fall 2018
+
+Project 3
+Color Fun Project
+
+ */
+
 package com.example.cpitcel.colorcontrol;
 
 import android.graphics.Color;
@@ -7,7 +17,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
@@ -39,53 +48,52 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         tvAlphaVal = findViewById(R.id.tvAlphaVal);
         colorView = findViewById(R.id.colorView);
 
+        //Need to set this else for the onProgressChange to work
         sbRed.setOnSeekBarChangeListener(this);
         sbGreen.setOnSeekBarChangeListener(this);
         sbBlue.setOnSeekBarChangeListener(this);
         sbAlpha.setOnSeekBarChangeListener(this);
 
+        //Generate random numbers for initial value
         redVal = new Random().nextInt(255);
         greenVal = new Random().nextInt(255);
         blueVal = new Random().nextInt(255);
         alphaVal = new Random().nextInt(255);
 
+        //set the initial values
         sbRed.setProgress(redVal);
         sbGreen.setProgress(greenVal);
         sbBlue.setProgress(blueVal);
         sbAlpha.setProgress(alphaVal);
 
-        tvRedVal.setText(String.valueOf(redVal));
-        tvGreenVal.setText(String.valueOf(greenVal));
-        tvBlueVal.setText(String.valueOf(blueVal));
-        tvAlphaVal.setText(String.valueOf(alphaVal));
-
-        colorView.setBackgroundColor(Color.argb(alphaVal, redVal, greenVal, blueVal));
-
+        //colorView.setBackgroundColor(Color.argb(alphaVal, redVal, greenVal, blueVal));
         Log.i("Color", "End of On Create");
-        //On OnSeekBarChangeListener
-        //Check for which seek bar, and update the value
-        //Update the view, always done, so can be outside any conditional
     }
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        Log.i("Color", "onProgressChanged: " + String.valueOf(seekBar.getId()));
+        Log.i("Color", "onProgressChanged: ");
         switch (seekBar.getId()) {
             case R.id.sbRed:
+                Log.i("Color", "Red Progress Changed");
                 tvRedVal.setText(String.valueOf(progress));
                 break;
             case R.id.sbGreen:
+                Log.i("Color", "Green Progress Changed");
                 tvGreenVal.setText(String.valueOf(progress));
                 break;
             case R.id.sbBlue:
+                Log.i("Color", "Blue Progress Changed");
                 tvBlueVal.setText(String.valueOf(progress));
                 break;
             case R.id.sbAlpha:
+                Log.i("Color", "Alpha Progress Changed");
                 tvAlphaVal.setText(String.valueOf(progress));
                 break;
             default:
                 break;
         }
+        Log.i("Color", "Done with Switch");
         colorView.setBackgroundColor(Color.argb(sbAlpha.getProgress(), sbRed.getProgress(), sbGreen.getProgress(), sbBlue.getProgress()));
     }
 
